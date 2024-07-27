@@ -7,6 +7,7 @@ const initalGameBoard = [
 ];
 
 export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
+  //This code has a state intersection with the gameTurns state in the App.jsx so the instructor commented it out and prepare for another solution. I didn't do that because the code will break.
   const [gameBoard, setGameBoard] = useState(initalGameBoard);
 
   function handleSelectedSquare(rowIndex, colIndex) {
@@ -20,6 +21,7 @@ export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
 
     onSelectSquare();
   }
+  // comment end. In turn switch to using the gameTurns
 
   return (
     <ol id="game-board">
